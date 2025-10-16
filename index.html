@@ -1,52 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Genesis DNA Show</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Genesis DNA Show | Affordable DNA Testing in Kenya</title>
   <style>
     body {
+      font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #0A1E46 0%, #102A60 50%, #0A1E46 100%);
-      /* subtle navy gradient to fill wide screens */
+      background: #f9fafb;
+      color: #1f2937;
     }
 
-    .banner-container {
-      width: 100%;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      background-color: #0A1E46;
-      padding: 10px 0; /* small spacing above/below */
+    /* Navigation bar */
+    nav {
+      background: #0d47a1;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    nav a:hover {
+      opacity: 0.8;
     }
 
-    .banner-container img {
+    /* Banner styling */
+    .banner {
       width: 100%;
-      max-width: 1400px; /* keeps proportions & center focus */
-      height: auto;
+      max-width: 100%;
       display: block;
-      border: 3px solid #C9A23F; /* gold border */
-      box-shadow: 0 0 20px rgba(201, 162, 63, 0.25); /* soft gold glow */
-      border-radius: 6px; /* smooth rounded edges */
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 3px solid #d4af37; /* gold border */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      margin: 0 auto;
+      object-fit: cover;
     }
 
-    .banner-container img:hover {
-      transform: scale(1.01);
-      box-shadow: 0 0 25px rgba(201, 162, 63, 0.4);
+    /* About & contact sections */
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.7;
     }
 
+    h2 {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.5rem;
+      color: #1e3a8a;
+    }
+
+    /* Footer */
+    footer {
+      background: #0d47a1;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.95rem;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      .banner-container img {
+      .banner {
         border-width: 2px;
+      }
+      section {
+        margin: 1.5rem auto;
       }
     }
   </style>
 </head>
 <body>
-  <div class="banner-container">
-    <img src="genesis-banner.png" alt="The Genesis DNA Show Banner">
-  </div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.youtube.com/channel/UCIlL3TB9CE14IMUlrHYDPNw" target="_blank">YouTube</a>
+  </nav>
+
+  <img src="genesis-banner.png" alt="The Genesis DNA Show Banner" class="banner" />
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      <strong>The Genesis DNA Show</strong> is Kenya’s trusted source for affordable and reliable DNA testing.
+      We believe that everyone deserves <em>clarity, closure, and peace of mind</em>. Our mission is to make DNA
+      testing accessible while maintaining the highest ethical standards and confidentiality.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>
+      We provide a range of testing options designed to meet every need — from private family matters to legal cases.
+    </p>
+    <ul>
+      <li><strong>Paternity Testing</strong> – Accurate and confidential results for personal or legal clarity.</li>
+      <li><strong>Legal DNA Testing</strong> – Chain-of-custody process suitable for court or legal matters.</li>
+      <li><strong>Peace of Mind Tests</strong> – Discreet testing for personal knowledge.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>
+      📧 Email: <a href="mailto:genesis.show.biz@gmail.com">genesis.show.biz@gmail.com</a><br />
+      🎥 YouTube: <a href="https://www.youtube.com/channel/UCIlL3TB9CE14IMUlrHYDPNw" target="_blank">The Genesis DNA Show</a>
+    </p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> The Genesis DNA Show · Affordable DNA Testing in Kenya<br />
+    Designed with 💙 for truth & peace of mind
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
