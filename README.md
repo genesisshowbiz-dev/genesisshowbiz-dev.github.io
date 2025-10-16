@@ -1,4 +1,5 @@
-![genesisshowbiz-dev](banner.png)
+![The Genesis DNA Show Banner](https://genesisshowbiz-dev.github.io/banner.png)
+
 # The Genesis DNA Show
 
 **Affordable DNA Testing in Kenya to give you closure and peace of mind.**  
