@@ -10,90 +10,116 @@
       margin: 0;
       background: #f9fafb;
       color: #1f2937;
+      line-height: 1.6;
     }
 
-    /* Navigation bar */
+    /* Navigation */
     nav {
       background: #0d47a1;
-      color: white;
-      padding: 1rem 0;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1rem;
     }
     nav a {
-      color: white;
-      margin: 0 1rem;
+      color: #fff;
       text-decoration: none;
       font-weight: 500;
-      transition: opacity 0.2s;
+      transition: 0.2s;
     }
     nav a:hover {
-      opacity: 0.8;
+      color: #ffd700;
     }
 
-    /* Banner styling */
+    /* Banner */
     .banner {
       width: 100%;
-      max-width: 100%;
+      max-width: 900px;
+      height: auto;
       display: block;
-      border: 3px solid #d4af37; /* gold border */
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
       margin: 0 auto;
-      object-fit: cover;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    /* About & contact sections */
+    /* Sections */
     section {
-      max-width: 900px;
+      max-width: 850px;
       margin: 2rem auto;
       padding: 0 1rem;
-      line-height: 1.7;
     }
-
     h2 {
       border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 0.5rem;
+      padding-bottom: .5rem;
       color: #1e3a8a;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: .75rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #2563eb;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: .6rem 1.2rem;
+      background: #2563eb;
+      color: #fff;
+      border-radius: .5rem;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: #1d4ed8;
     }
 
     /* Footer */
     footer {
       background: #0d47a1;
-      color: #fff;
       text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.95rem;
-      margin-top: 3rem;
-    }
-    footer a {
-      color: #ffd700;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
+      padding: 2rem 1rem;
+      color: #fff;
+      font-size: 0.9rem;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       .banner {
-        border-width: 2px;
-      }
-      section {
-        margin: 1.5rem auto;
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
       }
     }
   </style>
 </head>
-<body>
 
+<body>
+  <!-- Banner -->
+  <img src="banner.png" alt="The Genesis DNA Show Banner" class="banner" />
+
+  <!-- Navigation Bar -->
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#watch">Watch</a>
     <a href="#contact">Contact</a>
-    <a href="https://www.youtube.com/channel/UCIlL3TB9CE14IMUlrHYDPNw" target="_blank">YouTube</a>
   </nav>
 
-  <img src="genesis-banner.png" alt="The Genesis DNA Show Banner" class="banner" />
-
+  <!-- About Section -->
   <section id="about">
     <h2>About Us</h2>
     <p>
@@ -103,29 +129,49 @@
     </p>
   </section>
 
+  <!-- Services Section -->
   <section id="services">
     <h2>Our Services</h2>
-    <p>
-      We provide a range of testing options designed to meet every need — from private family matters to legal cases.
-    </p>
-    <ul>
-      <li><strong>Paternity Testing</strong> – Accurate and confidential results for personal or legal clarity.</li>
-      <li><strong>Legal DNA Testing</strong> – Chain-of-custody process suitable for court or legal matters.</li>
-      <li><strong>Peace of Mind Tests</strong> – Discreet testing for personal knowledge.</li>
-    </ul>
+    <div class="cards">
+      <div class="card">
+        <h3>Paternity Testing</h3>
+        <p>Get accurate and confidential results to help you make informed family decisions.</p>
+      </div>
+      <div class="card">
+        <h3>Legal DNA Testing</h3>
+        <p>We provide chain-of-custody testing suitable for court or legal matters in Kenya.</p>
+      </div>
+      <div class="card">
+        <h3>Peace of Mind Tests</h3>
+        <p>Discreet testing for personal knowledge — because your peace matters most.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Watch Section -->
+  <section id="watch">
+    <h2>Watch Our Show</h2>
+    <p>
+      Catch our latest episodes on YouTube where we discuss real DNA stories and educate families
+      about truth, trust, and reconciliation.
+    </p>
+    <a class="btn" href="https://www.youtube.com/channel/UCIlL3TB9CE14IMUlrHYDPNw" target="_blank">
+      Visit YouTube Channel
+    </a>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p>
-      📧 Email: <a href="mailto:genesis.show.biz@gmail.com">genesis.show.biz@gmail.com</a><br />
+      📧 Email: <a href="mailto:genesis.show.biz@gmail.com">genesis.show.biz@gmail.com</a><br>
       🎥 YouTube: <a href="https://www.youtube.com/channel/UCIlL3TB9CE14IMUlrHYDPNw" target="_blank">The Genesis DNA Show</a>
     </p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    © <span id="year"></span> The Genesis DNA Show · Affordable DNA Testing in Kenya<br />
-    Designed with 💙 for truth & peace of mind
+    © <span id="year"></span> The Genesis DNA Show · All Rights Reserved
   </footer>
 
   <script>
