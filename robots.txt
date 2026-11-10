@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://genesisshowbiz-dev.github.io/sitemap.xml
